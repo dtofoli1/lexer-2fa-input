@@ -1,0 +1,20 @@
+.mainView {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.mainLogo {
+    width: 300px;
+}
+
+.mainForm {
+    padding-top: 10px;
+}
+
+input { 
+    width: 20px; 
+    text-align: center;
+}
