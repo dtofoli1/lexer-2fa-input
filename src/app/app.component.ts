@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -10,17 +11,27 @@ export class AppComponent {
 
   jumpTo(currentInput:string, nextInput:string, previousInput:string) {
     var key = eval("event.key;")
-    var tamanho = eval("document.F1."+ currentInput +".value.length;");
+    var size = eval("document.F1."+ currentInput +".value.length;");
 
-                if (tamanho == 1){
+                if (size == 1){
                     if (nextInput != ''){
                         eval("document.F1."+ nextInput +".focus();");
                     } else {
-                        alert("POST!!!");
-                        location.reload();
+                        this.openSnackBar('POST');
+                        eval("document.F1" + ".reset();")
                     }
                 } else if (key == 'Backspace' && previousInput != ''){
                     eval("document.F1."+ previousInput +".focus();");
                 } 
   };
+
+  constructor(private _snackBar: MatSnackBar) {}
+
+  openSnackBar(message: string){
+    this._snackBar.open(message, 'Fechar', {
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      duration: 3 * 1000
+    });
+  }
 }

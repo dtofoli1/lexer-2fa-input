@@ -3,18 +3,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
+}
+
+.mainCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .mainLogo {
     width: 300px;
+    padding-top: 10px;
+}
+
+h2 {
+    margin-top: 50px;
 }
 
 .mainForm {
     padding-top: 10px;
 }
 
-input { 
-    width: 20px; 
+mat-form-field {
+    width: 50px;
+    padding: 0px 10px 0px 10px;
     text-align: center;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 460px) {
+    mat-form-field {
+        width: 40px;
+        padding: 0px 10px 0px 10px;
+        text-align: center;
+        font-size: 18px;
+    }
 }

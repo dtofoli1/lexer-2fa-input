@@ -1,12 +1,26 @@
 <div class="mainView">
-  <img class="mainLogo" src="https://lexer.com.br/assets/img/logos/lexer_banner.png">
-        <h2>Lexer 2FA</h2>
+  <mat-card class="mainCard">
+    <img class="mainLogo" src="https://lexer.com.br/assets/img/logos/lexer_banner.png">
+        <h2>Insira o código de autenticação</h2>
         <form name="F1" class="mainForm">
-            <input type=text maxlength=1 name="input1" (keyup)="jumpTo(input1.name, 'input2', '')" #input1>
-            <input type=text maxlength=1 name="input2" (keyup)="jumpTo(input2.name, 'input3', 'input1')" #input2>
-            <input type=text maxlength=1 name="input3" (keyup)="jumpTo(input3.name, 'input4', 'input2')" #input3>
-            <input type=text maxlength=1 name="input4" (keyup)="jumpTo(input4.name, 'input5', 'input3')" #input4>
-            <input type=text maxlength=1 name="input5" (keyup)="jumpTo(input5.name, 'input6', 'input4')" #input5>
-            <input type=text maxlength=1 name="input6" (keyup)="jumpTo(input6.name, '', 'input5')" #input6>
+          <mat-form-field appearance="outline">
+            <input matInput type=text maxlength=1 name="input1" (keyup)="jumpTo(input1.name, 'input2', '')" #input1>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type=text maxlength="1" name="input2" (keyup)="jumpTo(input2.name, 'input3', 'input1')" #input2>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type=text maxlength="1" name="input3" (keyup)="jumpTo(input3.name, 'input4', 'input2')" #input3>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type=text maxlength="1" name="input4" (keyup)="jumpTo(input4.name, 'input5', 'input3')" #input4>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type=text maxlength="1" name="input5" (keyup)="jumpTo(input5.name, 'input6', 'input4')" #input5>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input matInput type=text maxlength="1" name="input6" (keyup)="jumpTo(input6.name, '', 'input5')" #input6>
+          </mat-form-field>
         </form>
+  </mat-card>
 </div>
